@@ -1,4 +1,4 @@
-#summary The version of Enso downloadable from humanized.com vs. the version in this source code
+#summary Comparison between the version of Enso downloadable from humanized.com vs. the open-source version
 
 There's bound to be some confusion about the difference between the version of Enso we're giving away on our website and the version in the Google Code repository you're looking at now.  This page will attempt to clear that up.
 
