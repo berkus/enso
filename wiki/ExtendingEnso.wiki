@@ -1,7 +1,7 @@
 #summary A description of ways to extend Enso
 
 At present, the primary way to extend and customize Enso is through
-the use of *plugins*.  A plugin is just a Python module with a single
+the use of *plugins*.  A plugin is just a Python module or package with a single
 function in it, `load()`, which takes no parameters, and is called
 when the Enso quasimode is about to start itself.
 
