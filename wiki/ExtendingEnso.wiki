@@ -22,4 +22,4 @@ enso.config.PLUGINS.extend(
     )
 }}}
 
-(This is a trivial, temporary change to see if svn commit logs are being sent properly...)
+(This is a trivial, temporary change to see if svn commit logs are being sent properly.)
