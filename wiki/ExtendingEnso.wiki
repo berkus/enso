@@ -21,5 +21,3 @@ enso.config.PLUGINS.extend(
     [ "mypackage.myplugin" ]
     )
 }}}
-
-(This is a trivial, temporary change to see if svn commit logs are being sent properly.)
