@@ -130,13 +130,13 @@ baseEnv = Environment(
 
     # Our custom environment variables used by our
     # SConstruct/SConscript files.
-    BASE_INSTALL_DIR = "#enso_win32",
-    INPUT_INSTALL_DIR = "#enso_win32/input",
-    GRAPHICS_INSTALL_DIR = "#enso_win32/graphics",
-    CAIRO_INSTALL_DIR = "#enso_win32/cairo",
-    CLIPBOARD_INSTALL_DIR = "#enso_win32/selection",
-    LIB_INSTALL_DIR = "#enso_win32",
-    BASE_INCLUDE_DIR = "#src",
+    BASE_INSTALL_DIR = "#enso/platform/win32",
+    INPUT_INSTALL_DIR = "#enso/platform/win32/input",
+    GRAPHICS_INSTALL_DIR = "#enso/platform/win32/graphics",
+    CAIRO_INSTALL_DIR = "#enso/platform/win32/cairo",
+    CLIPBOARD_INSTALL_DIR = "#enso/platform/win32/selection",
+    LIB_INSTALL_DIR = "#enso/platform/win32",
+    BASE_INCLUDE_DIR = "#src/platform/win32",
     SWIG = "C:\\swig\\swig.exe",
     DEBUG = 0
     )
@@ -146,8 +146,8 @@ baseEnv = Environment(
 # Tools
 # ----------------------------------------------------------------------------
 
-baseEnv.Tool( "SwigTool", toolpath = ["SConsTools"] )
-baseEnv.Tool( "HumanizedUtilsTool", toolpath = ["SConsTools"] )
+baseEnv.Tool( "SwigTool", toolpath = ["src/platform/win32/SConsTools"] )
+baseEnv.Tool( "HumanizedUtilsTool", toolpath = ["src/platform/win32/SConsTools"] )
 
 # ----------------------------------------------------------------------------
 # Library Definitions
@@ -164,7 +164,7 @@ baseEnv.addLib(
 # Our own built libraries
 baseEnv.addLib(
     libPath = baseEnv["LIB_INSTALL_DIR"],
-    includePath = "#src/Include"
+    includePath = "#src/platform/win32/Include"
     )
 
 
@@ -203,7 +203,7 @@ else:
 # Build Actions
 # ----------------------------------------------------------------------------
 
-SConscript( "src/Logging/SConscript", exports="env" )
-SConscript( "src/InputManager/SConscript", exports="env" )
-SConscript( "src/Graphics/SConscript", exports="env" )
-SConscript( "src/ClipboardBackend/SConscript", exports="env" )
+SConscript( "src/platform/win32/Logging/SConscript", exports="env" )
+SConscript( "src/platform/win32/InputManager/SConscript", exports="env" )
+SConscript( "src/platform/win32/Graphics/SConscript", exports="env" )
+SConscript( "src/platform/win32/ClipboardBackend/SConscript", exports="env" )

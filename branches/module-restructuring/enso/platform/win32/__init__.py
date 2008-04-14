@@ -30,7 +30,7 @@
 import os
 import atexit
 
-# Hack the PATH so we can load dlls from the enso_win32 directory
+# Hack the PATH so we can load dlls from the enso.platform.win32 directory
 oldPath = os.environ["PATH"]
 path = oldPath + ";" +  os.path.abspath( __path__[0] )
 os.environ["PATH"] = path
@@ -39,23 +39,23 @@ os.environ["PATH"] = path
 
 def provideInterface( name ):
     if name == "input":
-        import enso_win32.input
-        return enso_win32.input
+        import enso.platform.win32.input
+        return enso.platform.win32.input
     elif name == "graphics":
         # async event thread must be started before we create any
         # TransparentWindows, and stopped when we shut down:
-        import enso_win32.input.AsyncEventThread
-        enso_win32.input.AsyncEventThread.start()
-        atexit.register( enso_win32.input.AsyncEventThread.stop )
+        import enso.platform.win32.input.AsyncEventThread
+        enso.platform.win32.input.AsyncEventThread.start()
+        atexit.register( enso.platform.win32.input.AsyncEventThread.stop )
         # TODO make sure nothing bad will happen here if
         # provideInterface( "graphics" ) gets called more than once.
-        import enso_win32.graphics
-        return enso_win32.graphics
+        import enso.platform.win32.graphics
+        return enso.platform.win32.graphics
     elif name == "cairo":
-        import enso_win32.cairo
-        return enso_win32.cairo
+        import enso.platform.win32.cairo
+        return enso.platform.win32.cairo
     elif name == "selection":
-        import enso_win32.selection
-        return enso_win32.selection
+        import enso.platform.win32.selection
+        return enso.platform.win32.selection
     else:
         return None
