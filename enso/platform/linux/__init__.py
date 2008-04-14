@@ -33,16 +33,16 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 def provideInterface (name):
     '''Plug into Enso core'''
     if name == "input":
-        import enso_linux.input
-        return enso_linux.input
+        import enso.platform.linux.input
+        return enso.platform.linux.input
     elif name == "graphics":
-        import enso_linux.graphics
-        return enso_linux.graphics
+        import enso.platform.linux.graphics
+        return enso.platform.linux.graphics
     elif name == "cairo":
         import cairo
         return cairo
     elif name == "selection":
-        import enso_linux.selection
-        return enso_linux.selection
+        import enso.platform.linux.selection
+        return enso.platform.linux.selection
     else:
         return None
