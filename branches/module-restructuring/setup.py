@@ -163,7 +163,8 @@ setup (
         packages         = [
                             "enso",
                             "enso/commands",
-                            "enso/contrib", 
+                            "enso/contrib",
+                            "enso/contrib/scriptotron",
                             "enso/graphics",
                             "enso/input",
                             "enso/messages",
