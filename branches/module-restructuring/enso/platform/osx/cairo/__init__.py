@@ -1,1 +1,1 @@
-from enso_osx.cairo._cairo import *
+from enso.platform.osx.cairo._cairo import *
