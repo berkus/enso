@@ -65,7 +65,7 @@ quartzCairoBridge = qcbEnv.LoadableModule(
     target = ["quartz_cairo_bridge.so"],
     )
 
-qcbEnv.Install( "#enso_osx", quartzCairoBridge )
+qcbEnv.Install( "#enso/platform/osx", quartzCairoBridge )
 
 # key notifier
 
@@ -84,7 +84,7 @@ keyUtils = env.LoadableModule(
     FRAMEWORKS = ["ApplicationServices"]
     )
 
-env.Install( "#enso_osx/selection", keyUtils )
+env.Install( "#enso/platform/osx/selection", keyUtils )
 
 # Pycairo
 

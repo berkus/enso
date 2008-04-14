@@ -315,7 +315,7 @@ static PyMethodDef surface_methods[] = {
 PyTypeObject PycairoSurface_Type = {
     PyObject_HEAD_INIT(NULL)
     0,                                  /* ob_size */
-    "enso_osx.cairo.Surface",                    /* tp_name */
+    "enso.platform.osx.cairo.Surface",                    /* tp_name */
     sizeof(PycairoSurface),             /* tp_basicsize */
     0,                                  /* tp_itemsize */
     (destructor)surface_dealloc,        /* tp_dealloc */
@@ -585,7 +585,7 @@ static PyMethodDef image_surface_methods[] = {
 PyTypeObject PycairoImageSurface_Type = {
     PyObject_HEAD_INIT(NULL)
     0,                                  /* ob_size */
-    "enso_osx.cairo.ImageSurface",               /* tp_name */
+    "enso.platform.osx.cairo.ImageSurface",               /* tp_name */
     sizeof(PycairoImageSurface),        /* tp_basicsize */
     0,                                  /* tp_itemsize */
     0,                                  /* tp_dealloc */
@@ -687,7 +687,7 @@ static PyMethodDef pdf_surface_methods[] = {
 PyTypeObject PycairoPDFSurface_Type = {
     PyObject_HEAD_INIT(NULL)
     0,                                  /* ob_size */
-    "enso_osx.cairo.PDFSurface",                 /* tp_name */
+    "enso.platform.osx.cairo.PDFSurface",                 /* tp_name */
     sizeof(PycairoPDFSurface),          /* tp_basicsize */
     0,                                  /* tp_itemsize */
     0,                                  /* tp_dealloc */
@@ -821,7 +821,7 @@ static PyMethodDef ps_surface_methods[] = {
 PyTypeObject PycairoPSSurface_Type = {
     PyObject_HEAD_INIT(NULL)
     0,                                  /* ob_size */
-    "enso_osx.cairo.PSSurface",                  /* tp_name */
+    "enso.platform.osx.cairo.PSSurface",                  /* tp_name */
     sizeof(PycairoPSSurface),           /* tp_basicsize */
     0,                                  /* tp_itemsize */
     0,                                  /* tp_dealloc */
@@ -915,7 +915,7 @@ static PyMethodDef svg_surface_methods[] = {
 PyTypeObject PycairoSVGSurface_Type = {
     PyObject_HEAD_INIT(NULL)
     0,                                  /* ob_size */
-    "enso_osx.cairo.SVGSurface",                 /* tp_name */
+    "enso.platform.osx.cairo.SVGSurface",                 /* tp_name */
     sizeof(PycairoSVGSurface),          /* tp_basicsize */
     0,                                  /* tp_itemsize */
     0,                                  /* tp_dealloc */
@@ -981,7 +981,7 @@ static PyMethodDef win32_surface_methods[] = {
 PyTypeObject PycairoWin32Surface_Type = {
     PyObject_HEAD_INIT(NULL)
     0,                                  /* ob_size */
-    "enso_osx.cairo.Win32Surface",               /* tp_name */
+    "enso.platform.osx.cairo.Win32Surface",               /* tp_name */
     sizeof(PycairoWin32Surface),        /* tp_basicsize */
     0,                                  /* tp_itemsize */
     0,                                  /* tp_dealloc */
@@ -1065,7 +1065,7 @@ static PyMethodDef xlib_surface_methods[] = {
 PyTypeObject PycairoXlibSurface_Type = {
     PyObject_HEAD_INIT(NULL)
     0,                                  /* ob_size */
-    "enso_osx.cairo.XlibSurface",                /* tp_name */
+    "enso.platform.osx.cairo.XlibSurface",                /* tp_name */
     sizeof(PycairoXlibSurface),         /* tp_basicsize */
     0,                                  /* tp_itemsize */
     0,                                  /* tp_dealloc */
@@ -1127,7 +1127,7 @@ static PyMethodDef quartz_surface_methods[] = {
 PyTypeObject PycairoQuartzSurface_Type = {
     PyObject_HEAD_INIT(NULL)
     0,                                  /* ob_size */
-    "enso_osx.cairo.QuartzSurface",               /* tp_name */
+    "enso.platform.osx.cairo.QuartzSurface",               /* tp_name */
     sizeof(PycairoQuartzSurface),        /* tp_basicsize */
     0,                                  /* tp_itemsize */
     0,                                  /* tp_dealloc */

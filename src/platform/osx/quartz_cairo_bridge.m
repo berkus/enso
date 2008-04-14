@@ -58,7 +58,7 @@ static PyMethodDef quartz_cairo_bridge_methods[] = {
 PyMODINIT_FUNC
 initquartz_cairo_bridge( void )
 {
-    Py_InitModule( "enso_osx.quartz_cairo_bridge",
+    Py_InitModule( "enso.platform.osx.quartz_cairo_bridge",
                    quartz_cairo_bridge_methods );
 
     Pycairo_IMPORT;

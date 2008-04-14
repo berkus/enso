@@ -237,7 +237,7 @@ init_cairo(void)
         return;
 #endif
 
-    m = Py_InitModule("enso_osx.cairo._cairo", cairo_functions);
+    m = Py_InitModule("enso.platform.osx.cairo._cairo", cairo_functions);
 
     PyModule_AddStringConstant(m, "version", pycairo_version_string);
     PyModule_AddObject(m, "version_info",
@@ -319,7 +319,7 @@ init_cairo(void)
 
     /* Add 'cairo.Error' to the module */
     if (CairoError == NULL) {
-	CairoError = PyErr_NewException("enso_osx.cairo.Error", NULL, NULL);
+	CairoError = PyErr_NewException("enso.platform.osx.cairo.Error", NULL, NULL);
 	if (CairoError == NULL)
 	    return;
     }

@@ -202,7 +202,7 @@ typedef struct {
  * 2) Add 'Pycairo_IMPORT;' to the init<module> function
  */
 #define Pycairo_IMPORT \
-        Pycairo_CAPI = (Pycairo_CAPI_t*) PyCObject_Import("enso_osx.cairo", "CAPI")
+        Pycairo_CAPI = (Pycairo_CAPI_t*) PyCObject_Import("enso.platform.osx.cairo", "CAPI")
 
 #endif /* ifndef _INSIDE_PYCAIRO_ */
 

@@ -20,4 +20,4 @@ env.Append(
     CPPPATH = sys.prefix + "/include/python" + sys.version[:3],
     )
 
-SConscript( "src/SConscript", exports="env" )
+SConscript( "osx/SConscript", exports="env" )
