@@ -30,6 +30,17 @@ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
 OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
 
+import sys
+
+platforms = [
+    "linux",
+    "openbsd",
+    "freebsd",
+    "netbsd",
+]
+if not True in map (lambda s: sys.platform.startswith (s), platforms):
+    raise ImportError, "Unsupported platform"
+
 def provideInterface (name):
     '''Plug into Enso core'''
     if name == "input":
