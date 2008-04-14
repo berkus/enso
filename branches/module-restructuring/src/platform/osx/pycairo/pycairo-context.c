@@ -1405,7 +1405,7 @@ static PyMethodDef pycairo_methods[] = {
 PyTypeObject PycairoContext_Type = {
     PyObject_HEAD_INIT(NULL)
     0,                                  /* ob_size */
-    "enso_osx.cairo.Context",           /* tp_name */
+    "enso.platform.osx.cairo.Context",           /* tp_name */
     sizeof(PycairoContext),             /* tp_basicsize */
     0,                                  /* tp_itemsize */
     (destructor)pycairo_dealloc,        /* tp_dealloc */

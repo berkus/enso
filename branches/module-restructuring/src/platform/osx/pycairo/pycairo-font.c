@@ -37,7 +37,7 @@
 #include "pycairo-private.h"
 
 
-/* class enso_osx.cairo.FontFace --------------------------------------------------- */
+/* class enso.platform.osx.cairo.FontFace --------------------------------------------------- */
 
 /* PycairoFontFace_FromFontFace
  * Create a new PycairoFontFace from a cairo_font_face_t
@@ -99,7 +99,7 @@ static PyMethodDef font_face_methods[] = {
 PyTypeObject PycairoFontFace_Type = {
     PyObject_HEAD_INIT(NULL)
     0,                                  /* ob_size */
-    "enso_osx.cairo.FontFace",                   /* tp_name */
+    "enso.platform.osx.cairo.FontFace",                   /* tp_name */
     sizeof(PycairoFontFace),            /* tp_basicsize */
     0,                                  /* tp_itemsize */
     (destructor)font_face_dealloc,      /* tp_dealloc */
@@ -142,7 +142,7 @@ PyTypeObject PycairoFontFace_Type = {
 };
 
 
-/* class enso_osx.cairo.ScaledFont ------------------------------------------------- */
+/* class enso.platform.osx.cairo.ScaledFont ------------------------------------------------- */
 
 /* PycairoScaledFont_FromScaledFont
  * Create a new PycairoScaledFont from a cairo_scaled_font_t
@@ -258,7 +258,7 @@ static PyMethodDef scaled_font_methods[] = {
 PyTypeObject PycairoScaledFont_Type = {
     PyObject_HEAD_INIT(NULL)
     0,                                  /* ob_size */
-    "enso_osx.cairo.ScaledFont",                 /* tp_name */
+    "enso.platform.osx.cairo.ScaledFont",                 /* tp_name */
     sizeof(PycairoScaledFont),          /* tp_basicsize */
     0,                                  /* tp_itemsize */
     (destructor)scaled_font_dealloc,    /* tp_dealloc */
@@ -301,7 +301,7 @@ PyTypeObject PycairoScaledFont_Type = {
 };
 
 
-/* class enso_osx.cairo.FontOptions ------------------------------------------------ */
+/* class enso.platform.osx.cairo.FontOptions ------------------------------------------------ */
 
 /* PycairoFontOptions_FromFontOptions
  * Create a new PycairoFontOptions from a cairo_font_options_t
@@ -457,7 +457,7 @@ static PyMethodDef font_options_methods[] = {
 PyTypeObject PycairoFontOptions_Type = {
     PyObject_HEAD_INIT(NULL)
     0,                                  /* ob_size */
-    "enso_osx.cairo.FontOptions",                /* tp_name */
+    "enso.platform.osx.cairo.FontOptions",                /* tp_name */
     sizeof(PycairoFontOptions),         /* tp_basicsize */
     0,                                  /* tp_itemsize */
     (destructor)font_options_dealloc,   /* tp_dealloc */

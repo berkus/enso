@@ -12,4 +12,4 @@ pycairoLib = pycairoEnv.LoadableModule(
     LIBS=["python", "cairo"]
     )
 
-pycairoEnv.Install( "#enso_osx/cairo", pycairoLib )
+pycairoEnv.Install( "#enso/platform/osx/cairo", pycairoLib )

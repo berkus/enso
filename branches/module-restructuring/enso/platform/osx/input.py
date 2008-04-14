@@ -103,8 +103,8 @@ class _KeyNotifierController( object ):
             if e.errno == errno.ENOENT:
                 logging.info( "Couldn't find key notifier on path." )
                 # Maybe we're running from a repository checkout...
-                import enso_osx
-                path = os.path.normpath( enso_osx.__path__[0] + "/../bin" )
+                import enso
+                path = os.path.normpath( enso.__path__[0] + "/../bin" )
                 popen = self.__tryToStartKeyNotifier( path )
             else:
                 raise

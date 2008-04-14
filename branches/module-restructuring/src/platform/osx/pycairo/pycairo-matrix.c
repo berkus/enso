@@ -112,7 +112,7 @@ matrix_repr (PycairoMatrix *o)
 {
     char buf[256];
 
-    PyOS_snprintf(buf, sizeof(buf), "enso_osx.cairo.Matrix(%g, %g, %g, %g, %g, %g)",
+    PyOS_snprintf(buf, sizeof(buf), "enso.platform.osx.cairo.Matrix(%g, %g, %g, %g, %g, %g)",
 		  o->matrix.xx, o->matrix.yx,
 		  o->matrix.xy, o->matrix.yy,
 		  o->matrix.x0, o->matrix.y0);
@@ -283,11 +283,11 @@ static PySequenceMethods matrix_as_sequence = {
 static PyMethodDef matrix_methods[] = {
     /* Do not need to wrap all cairo_matrix_init_*() functions
      * C API Matrix constructors       Python equivalents
-     * cairo_matrix_init()             enso_osx.cairo.Matrix(xx,yx,xy,yy,x0,y0)
-     * cairo_matrix_init_identity()    enso_osx.cairo.Matrix()
-     * cairo_matrix_init_translate()   enso_osx.cairo.Matrix(x0=x0,y0=y0)
-     * cairo_matrix_init_scale()       enso_osx.cairo.Matrix(xx=xx,yy=yy)
-     * cairo_matrix_init_rotate()      enso_osx.cairo.Matrix.init_rotate(radians)
+     * cairo_matrix_init()             enso.platform.osx.cairo.Matrix(xx,yx,xy,yy,x0,y0)
+     * cairo_matrix_init_identity()    enso.platform.osx.cairo.Matrix()
+     * cairo_matrix_init_translate()   enso.platform.osx.cairo.Matrix(x0=x0,y0=y0)
+     * cairo_matrix_init_scale()       enso.platform.osx.cairo.Matrix(xx=xx,yy=yy)
+     * cairo_matrix_init_rotate()      enso.platform.osx.cairo.Matrix.init_rotate(radians)
      */
     {"init_rotate", (PyCFunction)matrix_init_rotate,
                                                    METH_VARARGS | METH_CLASS },
@@ -304,7 +304,7 @@ static PyMethodDef matrix_methods[] = {
 PyTypeObject PycairoMatrix_Type = {
     PyObject_HEAD_INIT(NULL)
     0,                                  /* ob_size */
-    "enso_osx.cairo.Matrix",                     /* tp_name */
+    "enso.platform.osx.cairo.Matrix",                     /* tp_name */
     sizeof(PycairoMatrix),              /* tp_basicsize */
     0,                                  /* tp_itemsize */
     (destructor)matrix_dealloc,         /* tp_dealloc */
