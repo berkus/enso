@@ -4,7 +4,7 @@ import os
 
 import AppKit
 
-from enso_osx.utils import sendMsg
+from enso.platform.osx.utils import sendMsg
 
 key_utils = ctypes.CDLL( os.path.join( __path__[0], "key_utils.so" ) )
 

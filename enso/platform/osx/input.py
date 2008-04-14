@@ -8,7 +8,7 @@ import objc
 import Foundation
 import AppKit
 
-from enso_osx.utils import sendMsg
+from enso.platform.osx.utils import sendMsg
 
 # Timer interval in seconds.
 _TIMER_INTERVAL = 0.010

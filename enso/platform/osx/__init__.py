@@ -1,15 +1,15 @@
 def provideInterface( name ):
     if name == "input":
-        import enso_osx.input
-        return enso_osx.input
+        import enso.platform.osx.input
+        return enso.platform.osx.input
     elif name == "graphics":
-        import enso_osx.graphics
-        return enso_osx.graphics
+        import enso.platform.osx.graphics
+        return enso.platform.osx.graphics
     elif name == "cairo":
-        import enso_osx.cairo
-        return enso_osx.cairo
+        import enso.platform.osx.cairo
+        return enso.platform.osx.cairo
     elif name == "selection":
-        import enso_osx.selection
-        return enso_osx.selection
+        import enso.platform.osx.selection
+        return enso.platform.osx.selection
     else:
         return None

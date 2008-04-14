@@ -7,8 +7,9 @@ import AppKit
 import Foundation
 import cairo
 
-from enso_osx.quartz_cairo_bridge import cairo_surface_from_NSGraphicsContext
-from enso_osx.utils import sendMsg
+from enso.platform.osx.quartz_cairo_bridge import \
+    cairo_surface_from_NSGraphicsContext
+from enso.platform.osx.utils import sendMsg
 
 MAX_OPACITY = 0xff
 
