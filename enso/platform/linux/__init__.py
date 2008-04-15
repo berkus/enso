@@ -32,6 +32,8 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import sys
 
+import enso.platform
+
 platforms = [
     "linux",
     "openbsd",
@@ -39,7 +41,7 @@ platforms = [
     "netbsd",
 ]
 if not True in map (lambda s: sys.platform.startswith (s), platforms):
-    raise ImportError, "Unsupported platform"
+    raise enso.platform.PlatformUnsupportedError()
 
 def provideInterface (name):
     '''Plug into Enso core'''

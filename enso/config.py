@@ -57,12 +57,17 @@ MINI_MSG_HELP_XML = "<p>The <command>hide mini messages</command>" \
     " and <command>put</command> commands control" \
     " these mini-messages.</p>"
 
+# List of default platforms supported by Enso; platforms are specific
+# types of providers that provide a suite of platform-specific
+# functionality.
+DEFAULT_PLATFORMS = ["enso.platform.osx",
+                     "enso.platform.linux",
+                     "enso.platform.win32"]
+
 # List of modules/packages that support the provider interface to
-# provide required platform-specific functionality to Enso.  Some of
-# these modules may not exist on the target platform; if they don't,
-# then they're ignored.  This means that you can just install
-# whichever ones you need and Enso will "just work".
-PROVIDERS = ["enso.platform.osx", "enso.platform.linux", "enso.platform.win32"]
+# provide required platform-specific functionality to Enso.
+PROVIDERS = []
+PROVIDERS.extend(DEFAULT_PLATFORMS)
 
 # List of modules/packages that support the plugin interface to
 # extend Enso.  The plugins are loaded in the order that they
