@@ -28,7 +28,13 @@
 
 
 import os
+import sys
 import atexit
+
+import enso.platform
+
+if not sys.platform.startswith("win"):
+    raise enso.platform.PlatformUnsupportedError()
 
 # Hack the PATH so we can load dlls from the enso.platform.win32 directory
 oldPath = os.environ["PATH"]

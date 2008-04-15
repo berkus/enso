@@ -115,7 +115,7 @@ def _initDefaultProviders():
 
             _providers.append( module )
             logging.info( "Added provider %s." % moduleName )
-        except ImportError:
+        except ProviderUnavailableError:
             logging.info( "Skipping provider %s." % moduleName )
 
 
@@ -149,6 +149,17 @@ def getInterface( name ):
 # ----------------------------------------------------------------------------
 # Exceptions
 # ----------------------------------------------------------------------------
+
+class ProviderUnavailableError( Exception ):
+    """
+    Exception raised when a provider is unavailable for use, even
+    though its implementation exists; this may be because, for
+    instance, the host system is unsupported by the provider, or the
+    provider communcates with third-party software that isn't
+    installed.
+    """
+
+    pass
 
 class ProviderNotFoundError( Exception ):
     """
