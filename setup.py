@@ -38,6 +38,14 @@ from distutils.core import setup
 from distutils.command.install import install as _install
 from distutils.command.install_data import install_data as _install_data
 
+if sys.platform.startswith("win") or sys.platform == "darwin":
+    # TODO: This script should work on OS X and Windows (see issue
+    # 19).
+    print "Sorry, this script currently doesn't work for Windows "
+    print "or OS X.  Please see README for instructions on how to "
+    print "get Enso up and running on these platforms."
+    sys.exit(-1)
+
 INSTALLED_FILES = "installed_files"
 
 class install (_install):

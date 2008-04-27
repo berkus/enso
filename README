@@ -1,21 +1,44 @@
-Enso Core Readme
-================
+Enso Readme
+===========
 
-For the time being, in order to use Enso, you need to add the root
-directory of the Enso source tree to your PYTHONPATH environment
-variable.
+Enso is an extensible, cross-platform quasimodal linguistic
+command-line interface written in Python.
 
-You'll also need to obtain, build, and install a platform-specific
-Enso backend; see the README in the root directory of the source tree
-for information on this.
+Building Enso
+-------------
 
-Aside from said backend and Python 2.4 or above, Enso currently has no
-other dependencies.
+To build Enso, you need:
+  * Python 2.4 or above
+    This can be found at http://www.python.org.
 
-No build step is currently required for Enso--it's all pure Python
-source code.
+  * SCons
+    This open-source, python-based build tool can be found at
+    http://www.scons.org.
 
-To run Enso, just execute scripts/run_enso.py.
-There's also a distutils-based install script to install Enso system-wide.
+You'll also need the appropriate prerequisites for your particular
+platform.  Please consult one of the following files:
+
+  README.osx    (Mac OS X)
+  README.win32  (Microsoft Windows)
+  README.linux  (Linux and other Un*x-based platforms)
+
+Once you've read this file, just run 'scons' from the root directory
+of the source tree.
+
+Running Enso
+------------
+
+To run Enso, just excecute the following from the root directory of
+the source tree:
+
+  python scripts/run_enso.py
+
+Installing Enso System-Wide
+---------------------------
+
+Enso has a distutils-based install script that can be used to install
+Enso system-wide, but it currently only works on Linux (see issue 19).
+
 To use it, just run
-    python setup.py install
+
+  python setup.py install
