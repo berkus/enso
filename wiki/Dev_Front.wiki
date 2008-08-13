@@ -1,0 +1,15 @@
+#summary Information for Developers
+#labels
+
+= Developer Documentation =
+
+Instructions for installing and running from the source are available at the [README]
+
+== For Contributors ==
+
+The Enso Project officially uses the [http://www.python.org/dev/peps/pep-0008/ PEP 8] style guide for code.  Please follow the guidelines and update any old code you come across.
+
+== Developer Assets ==
+
+  * [Extending_Enso How to extend Enso]
+  * [Enso_API Enso API] Reference
