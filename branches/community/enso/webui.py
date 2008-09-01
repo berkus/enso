@@ -7,10 +7,7 @@ class myhandler(BaseHTTPRequestHandler):
   def __init__(self, request, client_address, server, queue):
     self.queue = queue
     BaseHTTPRequestHandler.__init__(self, request, client_address, server)
-  def do_GET(self):
-    self.send_response(200)
-    self.end_headers()
-    self.wfile.write("""<html>GET<form method="POST"><input type="text" name="url" value="http://kryogenix.org/code/enso-install/marvellous.py"> """)
+
   def do_POST(self):
     form = cgi.FieldStorage(
             fp=self.rfile,
