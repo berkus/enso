@@ -8,6 +8,22 @@ class myhandler(BaseHTTPRequestHandler):
     self.queue = queue
     BaseHTTPRequestHandler.__init__(self, request, client_address, server)
 
+  def do_GET(self):
+    if self.path == "/install.js":
+      jspath = os.path.join(os.path.split(__file__)[0], "enso-install.js")
+      fp = open(jspath)
+      js = fp.read()
+      fp.close()
+      self.send_response(200)
+      self.send_header("Content-Type", "text/javascript")
+      self.end_headers()
+      self.wfile.write(js)
+    else:
+      self.send_response(404)
+      self.end_headers()
+      self.wfile.write("404 Not Found")
+      
+
   def do_POST(self):
     form = cgi.FieldStorage(
             fp=self.rfile,
