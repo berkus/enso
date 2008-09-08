@@ -45,3 +45,23 @@ class EnsoApi(object):
         if isinstance(seldict, basestring):
             seldict = { "text" : unicode(seldict) }
         return selection.set(seldict)
+
+    def get_enso_commands_folder(self):
+        """
+        Returns the location of the Enso scripts folder.
+        """
+        from tracker import SCRIPTS_FOLDER_NAME
+        import os
+        return os.path.expanduser(SCRIPTS_FOLDER_NAME)
+
+    def get_commands_from_text(self, text):
+        """
+        Given a block of Python text, returns all the valid Enso
+        commands defined therein.
+        """
+        from cmdretriever import getCommandsFromObjects
+        execGlobals = {}
+        exec text in execGlobals
+        commands = getCommandsFromObjects( execGlobals )
+        return commands 
+
