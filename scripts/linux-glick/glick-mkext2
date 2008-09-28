@@ -2,7 +2,7 @@
 # glick-mkext2
 # Slightly altered by Stuart Langridge for Enso
 # taken from glick 0.2, http://www.gnome.org/~alexl/glick/releases/
-# altered to use Bash, not sh
+# altered to use Bash, not sh, and to make img 180% larger. This needs tweaking.
 
 if [ $# != 2 ]; then
   echo "Usage: glick-mkext2 <ext2 image name> <directory>"
