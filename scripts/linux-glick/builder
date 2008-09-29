@@ -13,6 +13,6 @@ cp $ENSOROOT/scripts/linux-glick/start .
 sudo $GLICK/glick-mkext2 $BUILDROOT/image.ext2 $BUILDIN
 $GLICK/mkglick $BUILDROOT/ensoexe $BUILDROOT/image.ext2
 
-cp $BUILDROOT/ensoexe $ENSOROOT/enso-linux
+cp $BUILDROOT/ensoexe $ENSOROOT/enso-linux-$(uname -m)
 rm -rf $BUILDROOT
 

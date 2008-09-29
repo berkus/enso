@@ -56,6 +56,6 @@ EXT2FS_LIB=`pkg-config --libs ext2fs`
 EXT2FS_LIB="/usr/lib/libext2fs.a /usr/lib/libcom_err.a"
 
 LIBDIR=$(dirname $0)
-gcc $LIBDIR/header.a $OBJS $EXT2FS_LIB `pkg-config --libs fuse` -o $GLICK_FILE
+gcc $LIBDIR/header.a.$(uname -m) $OBJS $EXT2FS_LIB `pkg-config --libs fuse` -o $GLICK_FILE
 rm -rf $DIR
 strip $GLICK_FILE
